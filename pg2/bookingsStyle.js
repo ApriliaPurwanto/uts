@@ -58,6 +58,7 @@ const styles = StyleSheet.create({
         paddingTop:15,
         textAlign:'right',
         color:'black',
+        fontWeight:'bold',
     },
 });
 export default styles;

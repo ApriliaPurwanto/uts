@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-// import { MaterialCommunityIcons } from '@expo/vector-icons';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Home from '../pg1/home';
 import Bookings from '../pg2/bookings'
 import Cancelations from '../pg3/cancelations'
@@ -13,7 +13,7 @@ function MyTabs() {
     return (
       <Tab.Navigator
         screenOptions={{
-          tabBarActiveTintColor: '#e91e63',
+          tabBarActiveTintColor: '#cd5c5c',
           headerShown: false,
         }}
       >
@@ -22,9 +22,9 @@ function MyTabs() {
           component={Home}
           options={{
             tabBarLabel: 'Home',
-            // tabBarIcon: ({ color, size }) => (
-            // //   <MaterialCommunityIcons name="home" color={color} size={size} />
-            // ),
+            tabBarIcon: ({ color, size }) => (
+              <MaterialCommunityIcons name="home" color={color} size={size} />
+            ),
           }}
         />
         <Tab.Screen
@@ -32,9 +32,9 @@ function MyTabs() {
           component={Bookings}
           options={{
             tabBarLabel: 'Bookings',
-            // tabBarIcon: ({ color, size }) => (
-            // //   <MaterialCommunityIcons name="bell" color={color} size={size} />
-            // ),
+            tabBarIcon: ({ color, size }) => (
+              <MaterialCommunityIcons name="book" color={color} size={size} />
+            ),
           }}
         />
         <Tab.Screen
@@ -42,9 +42,9 @@ function MyTabs() {
           component={Cancelations}
           options={{
             tabBarLabel: 'Cancelations',
-            // tabBarIcon: ({ color, size }) => (
-            //   <MaterialCommunityIcons name="account" color={color} size={size} />
-            // ),
+            tabBarIcon: ({ color, size }) => (
+              <MaterialCommunityIcons name="book-cancel" color={color} size={size} />
+            ),
           }}
         />
       </Tab.Navigator>

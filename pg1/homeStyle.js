@@ -7,12 +7,13 @@ const styles = StyleSheet.create({
         backgroundColor:'white',
         width:'80%',
         height:600,
+        padding:20,
     },
     title:{
         color:'#cd5c5c',
         fontSize:25,
         fontWeight:'bold',
-        paddingTop:10,
+        // paddingTop:10,
         alignItems:'center',
         paddingBottom:15,
     },
@@ -23,12 +24,13 @@ const styles = StyleSheet.create({
     },
     text:{
         color:'black',
+        fontWeight:'bold',
         padding:10,
-        paddingLeft:14,
+        paddingLeft:5,
     },
     TextInput:{
         borderWidth:1,
-        width:'90%',
+        width:'83%',
         borderRadius:10,
         color:'black',
         padding:5,
@@ -36,12 +38,16 @@ const styles = StyleSheet.create({
     },
     position:{
         alignItems:'center',
+        flexDirection:'row',
     },
     search_btn:{
         color:'white',
         width:'90%',
-        paddingTop:45,
+        paddingTop:5,
         borderRadius:10,
     },
+    position_btn:{
+        alignItems:'center',
+    }
 });
 export default styles;

@@ -81,70 +81,70 @@ const Date = [
 const Time = [
     {
         time_id = "T01",
-        time_detail = "09:00 AM",
+        time_detail = "09:00",
     },
     {
         time_id = "T02",
-        time_detail = "12:00 PM",
+        time_detail = "12:00",
     },
     {
         time_id = "T03",
-        time_detail = "03:00 PM",
+        time_detail = "03:00",
     },
     {
         time_id = "T04",
-        time_detail = "06:00 PM",
+        time_detail = "06:00",
     },
     {
         time_id = "T05",
-        time_detail = "09:00 PM",
+        time_detail = "09:00",
     },
 ];
 
-const Schedule = [
+const Price = [
     {
-        schedule_id = "SC01",
+        price_id = "P01",
         origin_id = "O01",
         destination_id = "D03",
         service_id = "S01",
         date_id = "DT01",
         time_id = "T01",
-        price = "Rp 500.000",
+        price_detail = "Rp 500.000",
     },
     {
-        schedule_id = "SC02",
+        price_id = "P02",
         origin_id = "O01",
         destination_id = "D03",
         service_id = "S02",
         date_id = "DT01",
         time_id = "T01",
-        price = "Rp 300.000",
+        price_detail = "Rp 300.000",
     },
     {
-        schedule_id = "SC03",
+        price_id = "P03",
         origin_id = "O02",
         destination_id = "D05",
         service_id = "S02",
         date_id = "DT03",
         time_id = "T03",
-        price = "Rp 900.000",
+        price_detail = "Rp 900.000",
     },
     {
-        schedule_id = "SC04",
+        price_id = "P04",
         origin_id = "O01",
         destination_id = "D04",
         service_id = "S01",
         date_id = "DT04",
         time_id = "T04",
-        price = "Rp 1.000.000",
+        price_detail = "Rp 1.000.000",
     },
     {
-        schedule_id = "SC05",
+        price_id = "P05",
         origin_id = "O03",
         destination_id = "D02",
         service_id = "S02",
         date_id = "DT05",
         time_id = "T05",
-        price = "Rp 150.000",
+        price_detail = "Rp 150.000",
     },
 ];
