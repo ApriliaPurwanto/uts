@@ -10,14 +10,12 @@ import {
 } from 'react-native';
 // import {
 //     Card,
-//     Icon
 // } from 'react-native-elements';
 import styles from './bookingsStyle';
 
 const Bookings = () => {
     return (
         <SafeAreaView>
-            {/* <Card> */}
             <View style={styles.header}>
                 <Text style={styles.headerText}>Daftar Pemesanan</Text>
             </View>
@@ -45,7 +43,6 @@ const Bookings = () => {
                     </View>
                 </View>
             </View>
-            {/* </Card> */}
         </SafeAreaView>
     )
 }

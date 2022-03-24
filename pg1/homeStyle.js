@@ -13,7 +13,6 @@ const styles = StyleSheet.create({
         color:'#cd5c5c',
         fontSize:25,
         fontWeight:'bold',
-        // paddingTop:10,
         alignItems:'center',
         paddingBottom:15,
     },
