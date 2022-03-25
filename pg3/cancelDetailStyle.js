@@ -2,7 +2,7 @@ import {
     StyleSheet
 } from 'react-native';
 
-const styles = StyleSheet.create({
+const styless = StyleSheet.create({
     box:{
         backgroundColor:'#e8e8e8',
         width:'85%',
@@ -68,4 +68,4 @@ const styles = StyleSheet.create({
         fontWeight:'bold',
     },
 });
-export default styles;
+export default styless;

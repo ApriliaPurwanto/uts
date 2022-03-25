@@ -17,7 +17,8 @@ import { useRoute } from '@react-navigation/native';
 import { origin,destination,service,date,time,price } from '../data/data'
 // import { useNavigation } from '@react-navigation/native';
 
-const CancelDetail = () => {
+const CancelDetail = ({navigation}) => {
+    const route = useRoute();
     return (
         <SafeAreaView>
             <View style={styles.header}>
@@ -27,24 +28,24 @@ const CancelDetail = () => {
                 <View style={styles.box}>
                     <Text style={styles.title1}>DIBATALKAN</Text>
                     <View style={styles.harbor}>
-                        <Text style={styles.origin}>Bakauheni</Text>
-                        <Text style={styles.destination}>Merak</Text>
+                        <Text style={styles.origin}>{route.params.origin}</Text>
+                        <Text style={styles.destination}>{route.params.destination}</Text>
                     </View>
                     <View>
                         <Text style={styles.title}>Jadwal Masuk Pelabuhan</Text>
                     </View>
                     <View>
-                        <Text style={styles.text}>Kamis, 17 Maret 2020</Text>
-                        <Text style={styles.text}>15:30 WIB</Text>
+                        <Text style={styles.text}>{route.params.date}</Text>
+                        <Text style={styles.text}>{route.params.time}</Text>
                     </View>
                     <View>
                         <Text style={styles.title}>Layanan</Text>
-                        <Text style={styles.text}>Express</Text>
+                        <Text style={styles.text}>{route.params.service}</Text>
                     </View>
                     <View style={styles.border}>
                     </View>
                     <View>
-                        <Text style={styles.price}>Rp 65.000,00</Text>
+                        <Text style={styles.price}>{route.params.price}</Text>
                     </View>
                 </View>
             </View>

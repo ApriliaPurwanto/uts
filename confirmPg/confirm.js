@@ -15,11 +15,11 @@ import {
 import styles from './confirmStyle';
 import { useRoute } from '@react-navigation/native';
 import { origin,destination,service,date,time,price } from '../data/data'
-// import { useNavigation } from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
 
-const Confirm = () => {
+const Confirm = ({navigation}) => {
+    const route = useRoute();
     return(
-
         <SafeAreaView>
             <View style={styles.position_box}>
                 <View style={styles.box}>
@@ -29,24 +29,24 @@ const Confirm = () => {
                 <View style={styles.position_box2}>
                     <View style={styles.boxDetail}>
                         <View style={styles.harbor}>
-                            <Text style={styles.origin}>Merak</Text>
-                            <Text style={styles.destination}>Bakauheni</Text>
+                            <Text style={styles.origin}>{route.params.origin}</Text>
+                            <Text style={styles.destination}>{route.params.destination}</Text>
                         </View>
                         <View>
                             <Text style={styles.title2}>Jadwal Masuk Pelabuhan</Text>
                         </View>
                         <View>
-                            <Text style={styles.text2}>3 April 2022</Text>
-                            <Text style={styles.text2}>09:00</Text>
+                            <Text style={styles.text2}>{route.params.date}</Text>
+                            <Text style={styles.text2}>{route.params.time}</Text>
                         </View>
                         <View>
                             <Text style={styles.title2}>Layanan</Text>
-                            <Text style={styles.text2}>Express</Text>
+                            <Text style={styles.text2}>{route.params.service}</Text>
                         </View>
                         <View style={styles.border}>
                         </View>
                         <View>
-                            <Text style={styles.price}>Rp 350.000</Text>
+                            <Text style={styles.price}>{route.params.price}</Text>
                         </View>
                     </View>
                 </View>
@@ -68,7 +68,18 @@ const Confirm = () => {
                             <Button
                                 title="Confirm"
                                 color='#cd5c5c'
-                                // onPress={() => navigation.goBack()}
+                                onPress={() => {
+                                    navigation.navigate('Bookings',{
+                                        origin : (route.params.origin).toString(),
+                                        destination : (route.params.destination).toString(),
+                                        service : (route.params.service).toString(),
+                                        date : (route.params.date).toString(),
+                                        time : (route.params.time).toString(),
+                                        price : (route.params.price).toString(),
+                                        condition : 'true',
+                                    }
+                                    )
+                                }}
                                 />
                         </View>
                     </View>

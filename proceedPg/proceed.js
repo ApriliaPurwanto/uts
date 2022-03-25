@@ -20,6 +20,7 @@ import { origin,destination,service,date,time,price } from '../data/data'
 
 const Proceed = ({navigation}) => {
     const route = useRoute();
+
     return(
         <SafeAreaView>
             <SearchData/>
@@ -115,7 +116,17 @@ const Proceed = ({navigation}) => {
                         <Button
                             title="Lanjutkan"
                             color="#cd5c5c"
-                            // onPress={Search}
+                            onPress={() => {
+                                navigation.navigate('Confirm',{
+                                    origin : (origin.find(f => f.origin_id === item.origin_id).origin_name).toString(),
+                                    destination : (destination.find(f => f.destination_id === item.destination_id).destination_name).toString(),
+                                    service : (service.find(f => f.service_id === item.service_id).service_name).toString(),
+                                    date : (date.find(f => f.date_id === item.date_id).date_detail).toString(),
+                                    time : (time.find(f => f.time_id === item.time_id).time_detail).toString(),
+                                    price : (price.find(f => f.price_id === item.price_id).price_detail).toString(),
+                                }
+                                )
+                            }}
                             />
                     </View>
                 </View>
@@ -128,7 +139,5 @@ const Proceed = ({navigation}) => {
             );
         }
 }
-
-
 
 export default Proceed;
