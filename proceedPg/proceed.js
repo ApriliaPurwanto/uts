@@ -7,12 +7,13 @@ import {
     Button,
     ScrollView,
     FlatList,
+    Image,
 } from 'react-native';
 // import {
 //     Card,
 //     Icon
 // } from 'react-native-elements';
-import styles from './proceedStyle';
+import styles from './proceedStyle'
 import { useRoute } from '@react-navigation/native';
 import { origin,destination,service,date,time,price } from '../data/data'
 // import { useNavigation } from '@react-navigation/native';
@@ -27,15 +28,15 @@ const Proceed = ({navigation}) => {
     
     function NotFound(){
         return(
+            <View>
                 <View style={styles.notfound}>
-                    {/* <Image source={require('../image/notfound.png')} style={{ width: 30, height: 30 }}/> */}
-                <View style={styles.notfound}>
-                    <Text> Ticket Is Not Available</Text>
+                    <Image source={require('../images/datanotfound.png')} style={{ width: 230, height: 160 }}/>
                 </View>
-                <View style={styles.notfound}>
-                    <Text>Please Choose Another Schedule</Text>
-                </View>
+                <View style={styles.textPosition}>
+                    <Text style={styles.textNotFound}> Tiket Tidak Tersedia</Text>
+                    <Text style={styles.textNotFound}>Mohon Pilih Jadwal Lain</Text>
                 </View> 
+            </View>
         );
     }
 
@@ -69,10 +70,10 @@ const Proceed = ({navigation}) => {
                 <FlatList
                 data = {Hasil}
                 renderItem={({item}) => (
-                    <View style={styles.position_box}>
+                <View style={styles.position_box}>
                 <View style={styles.box}>
                     <View>
-                    <Text style={styles.text2}>Rincian Tiket</Text>
+                    <Text style={styles.title}>Rincian Tiket</Text>
                 </View>
                 <View style={styles.position_box2}>
                     <View style={styles.boxDetail}>

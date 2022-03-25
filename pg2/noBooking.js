@@ -10,21 +10,21 @@ import {
     ScrollView,
 } from 'react-native';
 // import { Icon } from 'react-native-elements';
-import styles from './cancelationsStyle';
+import styles from './noBookingStyle';
 
-const Cancelations = () => {
+const NoBooking = () => {
     return (
         <SafeAreaView>
             <View style={styles.header}>
-                <Text style={styles.headerText}>Daftar Pembatalan</Text>
+                <Text style={styles.headerText}>Daftar Pemesanan</Text>
             </View>
             <View style={styles.image}>
-                <Image source={require('../images/tiketpink.png')} style={{ width: 300, height: 150 }}/>
+                <Image source={require('../images/tiketpink2.png')} style={{ width: 300, height: 110 }}/>
             </View>
             <View style={styles.textPosition}>
-                <Text style={styles.text}>Tidak Ada Aktivitas Pembatalan Tiket</Text>
+                <Text style={styles.text}>Belum Ada Pembelian Tiket</Text>
             </View>
         </SafeAreaView>
     )
 }
-export default Cancelations;
+export default NoBooking;

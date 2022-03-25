@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
     box:{
         backgroundColor:'white',
         width:'80%',
-        height:450,
+        height:630,
         padding:20,
     },
     position_box:{
@@ -18,15 +18,21 @@ const styles = StyleSheet.create({
         alignItems:'center',
         justifyContent:'center',
         paddingTop:20,
+        paddingBottom:15,
     },
     text2:{
         color:'black',
     },
     text3:{
-        color:'black',
+        color:'#cd5c5c',
         fontWeight:'bold',
         fontSize:20,
-        flex:1,
+    },
+    text4:{
+        color:'#cd5c5c',
+        fontWeight:'bold',
+        fontSize:20,
+        paddingBottom:5,
     },
     total :{
         flexDirection:'row',
@@ -53,10 +59,9 @@ const styles = StyleSheet.create({
         fontSize:17,
         color:'black',
     },
-        title:{
+    title:{
         color:'#cd5c5c',
         fontWeight:'bold',
-        fontSize:20,
     },
     title2:{
         paddingTop:10,
@@ -65,6 +70,9 @@ const styles = StyleSheet.create({
     },
     text:{
         color:'black',
+        fontWeight:'bold',
+        padding:10,
+        paddingLeft:5,
     },
     border:{
         borderBottomColor: 'black',
@@ -75,34 +83,24 @@ const styles = StyleSheet.create({
         paddingTop:15,
         textAlign:'right',
         color:'black',
-    },
-    price2:{
         fontWeight:'bold',
-        fontSize:20,
-        color:'black',
     },
     position_btn:{
         alignItems:'center',
+        justifyContent:'center',
         paddingTop:'16%',
         flexDirection:'row',
-        justifyContent:'space-evenly',
     },
     btn_detail:{
         width:'40%',
     },
-    notfound:{
-        alignItems:'center',
-        paddingTop:200,
-        paddingBottom:60,
-        },
-    textPosition:{
-        alignItems:'center',
-        justifyContent:'center',
+    TextInput:{
+        borderWidth:1,
+        width:'100%',
+        borderRadius:10,
+        color:'black',
+        padding:5,
+        paddingLeft:10,
     },
-    textNotFound:{
-        color:'#cd5c5c',
-        fontSize:17,
-        fontWeight:'bold',
-        },
 });
 export default styles;
