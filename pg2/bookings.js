@@ -3,6 +3,7 @@ import {
     SafeAreaView,
     View,
     Text,
+    Image,
     TextInput,
     Button,
     StatusBar,
@@ -13,8 +14,9 @@ import {
 //     Card,
 // } from 'react-native-elements';
 import styles from './bookingsStyle';
-import NoBooking from './noBooking';
 import { useRoute } from '@react-navigation/native';
+import styless from './noBookingStyle';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const Bookings = ({navigation}) => {
 
@@ -28,7 +30,17 @@ const Bookings = ({navigation}) => {
 
     function NotFound(){
         return (
-            <NoBooking/>
+            <SafeAreaView>
+            <View style={styless.header}>
+                <Text style={styless.headerText}>Daftar Pemesanan</Text>
+            </View>
+            <View style={styless.image}>
+                <Image source={require('../images/tiketpink2.png')} style={{ width: 300, height: 110 }}/>
+            </View>
+            <View style={styless.textPosition}>
+                <Text style={styless.text}>Belum Ada Pembelian Tiket</Text>
+            </View>
+        </SafeAreaView>
         )
     }
 
@@ -64,6 +76,7 @@ const Bookings = ({navigation}) => {
                 <View>
                     <View style={styles.harbor}>
                         <Text style={styles.origin}>{route.params.origin}</Text>
+                        <MaterialCommunityIcons name='arrow-right' size={20} style={{ color: '#cd5c5c' }} />
                         <Text style={styles.destination}>{route.params.destination}</Text>
                     </View>
                     <View>

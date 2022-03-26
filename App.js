@@ -23,9 +23,9 @@ const App = () => {
         {/* <Stack.Screen name="Cancelations" component={Cancelations}/> */}
         <Stack.Screen name="Proceed" component={Proceed}/>
         <Stack.Screen name="Confirm" component={Confirm}/>
-        {/* <Stack.Screen name="BookingDetail" component={BookingDetail}/> */}
+        <Stack.Screen name="BookingDetail" component={BookingDetail}/>
         {/* <Stack.Screen name="NoBooking" component={NoBooking}/> */}
-        <Stack.Screen name="CancelDetail" component={CancelDetail}/>
+        {/* <Stack.Screen name="CancelDetail" component={CancelDetail}/> */}
       </Stack.Navigator>
     </NavigationContainer>
   );

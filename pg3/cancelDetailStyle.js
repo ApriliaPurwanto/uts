@@ -35,10 +35,10 @@ const styless = StyleSheet.create({
     },
     harbor:{
         flexDirection:'row',
+        justifyContent:'space-between',
         paddingBottom:10,
     },
     origin:{
-        flex:1,
         fontWeight:'bold',
         fontSize:17,
         color:'black',

@@ -13,6 +13,7 @@ import {
 import styles from './cancelationsStyle';
 import styless from './cancelDetailStyle'
 import { NavigationHelpersContext, useRoute } from '@react-navigation/native';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const Cancelations = ({navigation}) => {
 
@@ -66,6 +67,7 @@ const Cancelations = ({navigation}) => {
                     <Text style={styless.title1}>DIBATALKAN</Text>
                     <View style={styless.harbor}>
                         <Text style={styless.origin}>{route.params.origin}</Text>
+                        <MaterialCommunityIcons name='arrow-right' size={20} style={{ color: '#cd5c5c' }} />
                         <Text style={styless.destination}>{route.params.destination}</Text>
                     </View>
                     <View>

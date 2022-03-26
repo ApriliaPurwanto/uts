@@ -14,6 +14,7 @@ import {
 // } from 'react-native-elements';
 import styles from './confirmStyle';
 import { useRoute } from '@react-navigation/native';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import { origin,destination,service,date,time,price } from '../data/data'
 import { useNavigation } from '@react-navigation/native';
 
@@ -30,6 +31,7 @@ const Confirm = ({navigation}) => {
                     <View style={styles.boxDetail}>
                         <View style={styles.harbor}>
                             <Text style={styles.origin}>{route.params.origin}</Text>
+                            <MaterialCommunityIcons name='arrow-right' size={20} style={{ color: '#cd5c5c' }} />
                             <Text style={styles.destination}>{route.params.destination}</Text>
                         </View>
                         <View>

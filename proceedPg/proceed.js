@@ -17,6 +17,7 @@ import styles from './proceedStyle'
 import { useRoute } from '@react-navigation/native';
 import { origin,destination,service,date,time,price } from '../data/data'
 // import { useNavigation } from '@react-navigation/native';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const Proceed = ({navigation}) => {
     const route = useRoute();
@@ -80,6 +81,7 @@ const Proceed = ({navigation}) => {
                     <View style={styles.boxDetail}>
                         <View style={styles.harbor}>
                             <Text style={styles.origin}>{origin.find(f => f.origin_id === item.origin_id).origin_name}</Text>
+                            <MaterialCommunityIcons name='arrow-right' size={20} style={{ color: '#cd5c5c' }} />
                             <Text style={styles.destination}>{destination.find(f => f.destination_id === item.destination_id).destination_name}</Text>
                         </View>
                         <View>
