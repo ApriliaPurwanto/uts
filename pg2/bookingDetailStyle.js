@@ -4,27 +4,41 @@ import {
 
 const styles = StyleSheet.create({
     box:{
-        backgroundColor:'#e8e8e8',
-        width:'85%',
-        height:230,
+        backgroundColor:'white',
+        width:'80%',
+        height:450,
         padding:20,
     },
     position_box:{
         alignItems:'center',
         justifyContent:'center',
-        padding:10,
-        paddingTop:35,
+        paddingTop:'16%',
     },
-    header:{
-        backgroundColor:'#cd5c5c',
-        height:55,
+    position_box2:{
         alignItems:'center',
         justifyContent:'center',
+        paddingTop:20,
     },
-    headerText:{
-        color:'white',
-        fontSize:17,
+    text2:{
+        color:'#cd5c5c',
         fontWeight:'bold',
+        fontSize:20,
+    },
+    text3:{
+        color:'black',
+        fontWeight:'bold',
+        fontSize:20,
+        flex:1,
+    },
+    total :{
+        flexDirection:'row',
+        paddingTop:15,
+    },
+    boxDetail:{
+        backgroundColor:'#e8e8e8',
+        width:'100%',
+        height:230,
+        padding:20,
     },
     harbor:{
         flexDirection:'row',
@@ -41,7 +55,7 @@ const styles = StyleSheet.create({
         fontSize:17,
         color:'black',
     },
-    title:{
+    title2:{
         paddingTop:10,
         fontWeight:'bold',
         color:'black',
@@ -57,8 +71,19 @@ const styles = StyleSheet.create({
     price:{
         paddingTop:15,
         textAlign:'right',
-        color:'#cd5c5c',
+        color:'black',
+    },
+    price2:{
         fontWeight:'bold',
+        fontSize:20,
+        color:'black',
+    },
+    position_btn:{
+        alignItems:'center',
+        paddingTop:'16%',
+    },
+    btn_detail:{
+        width:'60%',
     },
 });
 export default styles;

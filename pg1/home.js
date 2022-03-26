@@ -11,54 +11,73 @@ import {
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import styles from './homeStyle';
 
-const Home = () => {
+const Home = ({navigation}) => {
 
-    // const [origin, onChangeBerangkat] = React.useState('');
-    // const [destination, onChangeTujuan] = React.useState('');
-    // const [layanan, onChangeTanggal] = React.useState('');
-    // const [tanggal, onChangeTanggal] = React.useState('');
-    // const [jam, onChangeTanggal] = React.useState('');
+    const [origin, onChangeOrigin] = React.useState('');
+    const [destination, onChangeDestination] = React.useState('');
+    const [service, onChangeService] = React.useState('');
+    const [date, onChangeDate] = React.useState('');
+    const [time, onChangeTime] = React.useState('');
 
+    const Search = () =>{
+        navigation.navigate('Proceed',{
+            origin : origin,
+            destination : destination,
+            service : service,
+            date : date,
+            time : time,
+        })
+    }
     return (
         <SafeAreaView>
             <View style={styles.position_box}>
                 <View style={styles.box}>
                     <View style={styles.title}>
-                    <Text style={styles.title}>Kapalzy</Text>
+                        <Text style={styles.title}>Kapalzy</Text>
                     </View>
                     <Text style={styles.text}>Pelabuhan Awal</Text>
                     <View style={styles.position}>
                         <MaterialCommunityIcons name='sail-boat' size={30} style={{ color: '#cd5c5c', paddingRight:10, }} />
                         <TextInput style={styles.TextInput}
-                                placeholder='Pilih Pelabuhan Awal'
+                            onChangeText={onChangeOrigin}
+                            value={origin}
+                            placeholder='Pilih Pelabuhan Awal'
                         />
                     </View>
                     <Text style={styles.text}>Pelabuhan Tujuan</Text>
                     <View style={styles.position}>
                         <MaterialCommunityIcons name='sail-boat' size={30} style={{ color: '#cd5c5c', paddingRight:10, }} />
                         <TextInput style={styles.TextInput}
-                                placeholder='Pilih Pelabuhan Tujuan'
+                            onChangeText={onChangeDestination}
+                            value={destination}
+                            placeholder='Pilih Pelabuhan Tujuan'
                         />
                     </View>
                     <Text style={styles.text}>Kelas Layanan</Text>
                     <View style={styles.position}>
                         <MaterialCommunityIcons name='bag-checked' size={30} style={{ color: '#cd5c5c', paddingRight:10, }} />
                         <TextInput style={styles.TextInput}
-                                placeholder='Pilih Layanan'
+                            onChangeText={onChangeService}
+                            value={service}
+                            placeholder='Pilih Layanan'
                         />
                     </View>
                     <Text style={styles.text}>Tanggal Masuk Pelabuhan</Text>
                     <View style={styles.position}>
                         <MaterialCommunityIcons name='calendar' size={30} style={{ color: '#cd5c5c', paddingRight:10, }} />
                         <TextInput style={styles.TextInput}
-                                placeholder='Pilih Tanggal Masuk'
+                            onChangeText={onChangeDate}
+                            value={date}
+                            placeholder='Pilih Tanggal Masuk'
                         />
                     </View>
                     <Text style={styles.text}>Jam Masuk Pelabuhan</Text>
                     <View style={styles.position}>
                         <MaterialCommunityIcons name='clock-time-four-outline' size={30} style={{ color: '#cd5c5c', paddingRight:10, }} />
                         <TextInput style={styles.TextInput}
-                                placeholder='Pilih Jam Masuk'
+                            onChangeText={onChangeTime}
+                            value={time}
+                            placeholder='Pilih Jam Masuk'
                         />
                     </View>
                     <View style={styles.position_box}>
@@ -66,7 +85,7 @@ const Home = () => {
                                 <Button
                                     title="Buat Tiket"
                                     color="#cd5c5c"
-                                    // onPress={Search}
+                                    onPress={Search}
                                 />
                             </View>
                     </View>

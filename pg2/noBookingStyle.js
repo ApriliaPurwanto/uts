@@ -2,7 +2,7 @@ import {
     StyleSheet
 } from 'react-native';
 
-const styles = StyleSheet.create({
+const styless = StyleSheet.create({
     header:{
         backgroundColor:'#cd5c5c',
         height:55,
@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
     },
     image:{
         alignItems:'center',
-        paddingTop:200,
+        paddingTop:240,
         paddingBottom:60,
     },
     textPosition:{
@@ -29,4 +29,4 @@ const styles = StyleSheet.create({
         fontWeight:'bold',
     }
 });
-export default styles;
+export default styless;

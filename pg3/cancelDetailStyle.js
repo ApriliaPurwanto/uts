@@ -2,11 +2,11 @@ import {
     StyleSheet
 } from 'react-native';
 
-const styles = StyleSheet.create({
+const styless = StyleSheet.create({
     box:{
         backgroundColor:'#e8e8e8',
         width:'85%',
-        height:230,
+        height:295,
         padding:20,
     },
     position_box:{
@@ -25,6 +25,13 @@ const styles = StyleSheet.create({
         color:'white',
         fontSize:17,
         fontWeight:'bold',
+    },
+    title1:{
+    color:'#900d09',
+    fontWeight:'bold',
+    fontSize:20,
+    textAlign:'center',
+    paddingBottom:30,
     },
     harbor:{
         flexDirection:'row',
@@ -57,8 +64,8 @@ const styles = StyleSheet.create({
     price:{
         paddingTop:15,
         textAlign:'right',
-        color:'#cd5c5c',
+        color:'black',
         fontWeight:'bold',
     },
 });
-export default styles;
+export default styless;
